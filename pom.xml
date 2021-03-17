@@ -6,10 +6,12 @@
 
     <groupId>org.secretbottle</groupId>
     <artifactId>exchanger</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>currency-exchange-rate</module>
+        <module>currency-exchange-info</module>
+        <module>currency-exchange-data</module>
+        <module>models</module>
     </modules>
 </project>

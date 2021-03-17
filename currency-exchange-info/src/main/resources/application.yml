@@ -1,0 +1,25 @@
+# Server configuration
+server:
+  port: 8080
+
+#Setting logging levels
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    ROOT: INFO
+    com.secretbottle: INFO
+    org.springframework.cloud: ERROR
+    org.springframework.web: ERROR
+
+#spring config
+spring:
+  cloud:
+    stream:
+      bindings:
+        request-out-0:
+          destination: requestCh
+        receive-in-0:
+          destination: responseCh
+      function:
+        definition: request;receive

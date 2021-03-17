@@ -1,0 +1,29 @@
+# Server configuration
+server:
+  port: 8081
+
+#Setting logging levels
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    ROOT: INFO
+    com.secretbottle: INFO
+    org.springframework.cloud: ERROR
+    org.springframework.data: ERROR
+
+#spring config
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  cloud:
+    stream:
+      bindings:
+        receiveAndReply-out-0:
+          destination: responseCh
+        receiveAndReply-in-0:
+          destination: requestCh
+      function:
+        definition: receiveAndReply
