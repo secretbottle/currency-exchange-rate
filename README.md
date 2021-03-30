@@ -21,9 +21,11 @@ The following instructions assume that you are running Kafka as a Docker image.
 
 And then test curl samples
 `curl -s http://localhost:8080/currency-exchange/from/USD/to/RUB`
+
 The application will return:
 `{"from":"USD","to":"RUB","ratio":72.79,"commission":0.3}`
 
 `curl -s http://localhost:8080/currency-exchange/from/RUB/to/USD`
+
 The application will return:
 `{"from":"RUB","to":"USD","ratio":0.01374,"commission":0.3}`
