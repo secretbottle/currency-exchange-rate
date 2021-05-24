@@ -1,4 +1,5 @@
 #Currency exchanger info
+This project was created to learn Spring Boot and Spring Cloud Stream
 
 ## Requirements
 
